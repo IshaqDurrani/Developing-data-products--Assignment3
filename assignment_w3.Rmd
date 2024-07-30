@@ -1,0 +1,22 @@
+---
+title: "Week 3 Assignmnet"
+author: "Ishaq Ali Shah"
+always_allow_html: yes
+---
+
+
+
+## Vegetation dataset
+
+The relationship between NDVI and Time with respect to year and Precipitation
+
+
+```{r,echo=FALSE, message=FALSE, warning=FALSE,comment=FALSE,error=FALSE}
+library(plotly)
+data <- read.csv("R3.csv")
+plot_ly(data, x = ~ Time, y = ~ NDVI,  color = ~ as.factor(Time), size = ~ Precipitation, mode="markers")
+```
+
+'Figure 1: NDVI vs Time'
+
+## Thank you
